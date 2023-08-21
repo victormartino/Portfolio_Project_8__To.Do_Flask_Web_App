@@ -216,7 +216,7 @@ def delete_task(task_id):
         else:
             abort(404)
     except AttributeError:
-        # When not logged in, even though technically one should be able to check "not current_user.is_anonymous",
+        # When not logged in, even though technically one should be able to check "current_user.is_anonymous",
         # Jinja kept giving me an attribute error, so I used an exception to achieve the desired functionality
         chosen_task = db.get_or_404(ListItem, task_id)
         db.session.delete(chosen_task)
