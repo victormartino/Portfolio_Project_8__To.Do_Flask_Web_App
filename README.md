@@ -37,4 +37,4 @@ Connect with me on [LinkedIn](https://www.linkedin.com/in/victor-martino-4467651
 
 ## Acknowledgments
 
-This project was built by Victor Martino. You can find more of his work on [GitHub](https://github.com/victormartino).
+This project was built by Victor Martino. See more of my work on [GitHub](https://github.com/victormartino).
