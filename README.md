@@ -14,7 +14,7 @@ Welcome to the Flask To.Do Web App, where productivity meets seamless task manag
 
 ## Get Started 🚀
 
-1. **Clone the Repository**: `git clone https://github.com/victormartino/flask-todo-list-app.git`
+1. **Clone the Repository**: `git clone https://github.com/victormartino/Portfolio_Project_8__To.Do_Flask_Web_App.git`
 
 2. **Navigate to the Project Directory**: `cd flask-todo-list-app`
 
