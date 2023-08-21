@@ -1,0 +1,62 @@
+{% include "header.html" %}
+
+<style>
+h2 {
+  font-size: 40px !important;
+  margin-bottom: 30px;
+}
+
+h3 {
+  font-size: 22px !important;
+}
+
+.post-preview {
+  margin-left: 20px !important;
+}
+
+.masthead {
+  height: 30% !important;
+}
+
+</style>
+  <!-- Page Header -->
+  <header class="masthead" style="background-color: #FFBA01;">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h1>To.Do</h1>
+            <span class="subheading">Don't miss the important things =)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+      {% if all_todos: %}
+        <h2>My Lists:</h2>
+        {% for todo in all_todos: %}
+        <div class="post-preview">
+          <a href="{{ url_for('edit_list', list_id=todo.id) }}">
+            <h3 class="post-title">
+              {{ todo['list_name'] }}
+            </h3>
+          </a>
+        </div>
+        {% endfor %}
+      {% endif %}
+          {% if current_user.is_authenticated: %}
+          <div class="clearfix">
+            <a class="btn btn-primary float-right" href="{{url_for('new_list')}}">Add list</a>
+          </div>
+          {% endif %}
+      </div>
+    </div>
+  </div>
+  <hr>
+
+{% include "footer.html" %}
